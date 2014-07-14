@@ -1,7 +1,12 @@
 import requests
 import getpass
+<<<<<<< HEAD
 import urllib2
 from bs4 import BeautifulSoup
+=======
+from bs4 import BeautifulSoup
+
+>>>>>>> FETCH_HEAD
 s = requests.Session()
 
 usernameInput = raw_input("Enter Confluence username:")
@@ -18,13 +23,28 @@ resp = s.post(loginurl, data=loginCred)
 # store the response of getting the glossary url
 resp = s.get(glossaryurl)
 
-# store html as string to parse
+# store html as string
 toparse = resp.text.encode('utf-8')
 
 htmlFile = open("test.html", "w")
 htmlFile.write(toparse)
 htmlFile.close()
 
+<<<<<<< HEAD
+=======
+# setting up beautiful soup 
+soup = BeautifulSoup(open("test.html"))
+soup.prettify()
+
+#comment
+print(soup.find("div", {"class": "wiki-content"}).prettify())
+
+
+
+
+
+
+>>>>>>> FETCH_HEAD
 
 soup = BeautifulSoup("test.html")
 print(soup.prettify())
