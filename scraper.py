@@ -34,10 +34,28 @@ htmlFile = open("glossary.html", "w")
 htmlFile.write(soup.find("div", {"class": "wiki-content"}).prettify().encode('utf-8'))
 htmlFile.close()
 
-soup = BeautifulSoup(open("glossary.html"))
+tabledata = soup.findAll("td", {"class": "confluenceTd"})
 
+count = 1
+d = {}
+key = ""
 
+for data in tabledata:
+	if count%2 == 0:
+		soup1 = data.findAll("span")
+		soupList = []
+			for line in soup1 :
+			soupList += line
+		d[key] = soupList
+		key = ""
+	else:
+		key = data.span.string
+	count +=1
+
+print(d)	
 
 #melanie was here
 #phil was here
 #derek was here
+#htmlFile.write(soup.find("td", {"class": "confluenceTd"}).prettify().encode('utf-8'))
+
