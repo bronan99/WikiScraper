@@ -7,7 +7,8 @@ s = requests.Session()
 usernameInput = raw_input("Enter Confluence username:")
 passwordInput = getpass.getpass("Enter password:")
 
-loginCred = {"os_username": usernameInput, "os_password": passwordInput, "login": "Log In", "os_destination": "/dashboard.action"}
+loginCred = {"os_username": usernameInput, "os_password": passwordInput, "login": "Log In", 
+             "os_destination": "/dashboard.action"}
 loginurl = "http://wiki.cengage.com/login.action?os_destination=%2Fdashboard.action"
 glossaryurl = "http://wiki.cengage.com/display/NG/MindTap+Glossary"
 
@@ -37,3 +38,6 @@ print(soup.find("div", {"class": "wiki-content"}).prettify())
 
 
 
+#melanie was here
+#phil was here
+#derek was here
