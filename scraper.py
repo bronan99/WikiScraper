@@ -1,16 +1,8 @@
 import requests
 import getpass
-<<<<<<< HEAD
-<<<<<<< HEAD
 import urllib2
-from bs4 import BeautifulSoup
-=======
-=======
-import urllib2
->>>>>>> 0f5c4b0df9f4f45f38b53b775e0dea1b6cfe0587
 from bs4 import BeautifulSoup
 
->>>>>>> FETCH_HEAD
 s = requests.Session()
 
 usernameInput = raw_input("Enter Confluence username:")
@@ -34,8 +26,7 @@ htmlFile = open("test.html", "w")
 htmlFile.write(toparse)
 htmlFile.close()
 
-<<<<<<< HEAD
-=======
+
 # setting up beautiful soup 
 soup = BeautifulSoup(open("test.html"))
 soup.prettify()
@@ -49,11 +40,6 @@ htmlFile.close()
 soup = BeautifulSoup("test.html")
 print(soup.prettify())
 
-
->>>>>>> FETCH_HEAD
-
-soup = BeautifulSoup("test.html")
-print(soup.prettify())
 #melanie was here
 #phil was here
 #derek was here
