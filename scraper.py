@@ -1,13 +1,23 @@
 import requests
+import getpass
 
 s = requests.Session()
 
-loginCred = {"os_username": "mmanko", "os_password":"Cengage1", "login": "Log In", "os_destination": "/dashboard.action"}
+usernameInput = raw_input("Enter Confluence username:")
+passwordInput = getpass.getpass("Enter password:")
+
+loginCred = {"os_username": usernameInput, "os_password": passwordInput, "login": "Log In", "os_destination": "/dashboard.action"}
 loginurl = "http://wiki.cengage.com/login.action?os_destination=%2Fdashboard.action"
 glossaryurl = "http://wiki.cengage.com/display/NG/MindTap+Glossary"
 
+# login to comfluence using loginCred
 resp = s.post(loginurl, data=loginCred)
+
+# store the response of getting the glossary url
 resp = s.get(glossaryurl)
 
-print((resp.text).encode('utf-8'));
+# store html as string to parse
+toparse = resp.text.encode('utf-8')
+
+print(toparse)
 
