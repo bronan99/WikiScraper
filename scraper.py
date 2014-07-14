@@ -30,14 +30,11 @@ htmlFile.close()
 soup = BeautifulSoup(open("test.html"))
 soup.prettify()
 
-#comment
-
 htmlFile = open("test.html", "w")
 htmlFile.write(soup.find("div", {"class": "wiki-content"}).prettify().encode('utf-8'))
 htmlFile.close()
 
-soup = BeautifulSoup("test.html")
-print(soup.prettify())
+soup = BeautifulSoup(open("test.html"))
 
 #melanie was here
 #phil was here
