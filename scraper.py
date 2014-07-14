@@ -1,12 +1,8 @@
 import requests
 import getpass
-<<<<<<< HEAD
 import urllib2
 from bs4 import BeautifulSoup
-=======
-from bs4 import BeautifulSoup
 
->>>>>>> FETCH_HEAD
 s = requests.Session()
 
 usernameInput = raw_input("Enter Confluence username:")
