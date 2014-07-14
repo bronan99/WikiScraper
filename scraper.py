@@ -30,8 +30,6 @@ htmlFile = open("test.html", "w")
 htmlFile.write(toparse)
 htmlFile.close()
 
-<<<<<<< HEAD
-=======
 # setting up beautiful soup 
 soup = BeautifulSoup(open("test.html"))
 soup.prettify()
@@ -42,17 +40,11 @@ htmlFile = open("test.html", "w")
 htmlFile.write(soup.find("div", {"class": "wiki-content"}).prettify().encode('utf-8'))
 htmlFile.close()
 
-
-
-
-
-
-
-
->>>>>>> FETCH_HEAD
-
 soup = BeautifulSoup("test.html")
 print(soup.prettify())
+
+
+
 #melanie was here
 #phil was here
 #derek was here
