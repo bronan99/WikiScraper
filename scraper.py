@@ -1,5 +1,6 @@
 import requests
 import getpass
+from bs4 import BeautifulSoup
 
 s = requests.Session()
 
@@ -16,8 +17,22 @@ resp = s.post(loginurl, data=loginCred)
 # store the response of getting the glossary url
 resp = s.get(glossaryurl)
 
-# store html as string to parse
+# store html as string
 toparse = resp.text.encode('utf-8')
 
-print(toparse)
+htmlFile = open("test.html", "w")
+htmlFile.write(toparse)
+htmlFile.close()
+
+# setting up beautiful soup 
+soup = BeautifulSoup(open("test.html"))
+soup.prettify()
+
+print(soup.find("div", {"class": "wiki-content"}).prettify())
+
+
+
+
+
+
 
