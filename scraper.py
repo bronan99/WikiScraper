@@ -30,7 +30,12 @@ soup = BeautifulSoup(open("test.html"))
 soup.prettify()
 
 #comment
-print(soup.find("div", {"class": "wiki-content"}).prettify())
+
+htmlFile = open("test.html", "w")
+htmlFile.write(soup.find("div", {"class": "wiki-content"}).prettify().encode('utf-8'))
+htmlFile.close()
+
+
 
 
 
