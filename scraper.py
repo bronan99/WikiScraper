@@ -1,6 +1,7 @@
 import requests
 import getpass
-
+import urllib2
+from bs4 import BeautifulSoup
 s = requests.Session()
 
 usernameInput = raw_input("Enter Confluence username:")
@@ -20,8 +21,13 @@ resp = s.get(glossaryurl)
 # store html as string to parse
 toparse = resp.text.encode('utf-8')
 
-print(toparse)
+htmlFile = open("test.html", "w")
+htmlFile.write(toparse)
+htmlFile.close()
 
+
+soup = BeautifulSoup("test.html")
+print(soup.prettify())
 #melanie was here
 #phil was here
 #derek was here
