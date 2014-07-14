@@ -21,20 +21,22 @@ resp = s.get(glossaryurl)
 # store html as string
 toparse = resp.text.encode('utf-8')
 
-htmlFile = open("test.html", "w")
+htmlFile = open("glossary.html", "w")
 htmlFile.write(toparse)
 htmlFile.close()
 
 
 # setting up beautiful soup 
-soup = BeautifulSoup(open("test.html"))
+soup = BeautifulSoup(open("glossary.html"))
 soup.prettify()
 
-htmlFile = open("test.html", "w")
+htmlFile = open("glossary.html", "w")
 htmlFile.write(soup.find("div", {"class": "wiki-content"}).prettify().encode('utf-8'))
 htmlFile.close()
 
-soup = BeautifulSoup(open("test.html"))
+soup = BeautifulSoup(open("glossary.html"))
+
+
 
 #melanie was here
 #phil was here
