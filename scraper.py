@@ -28,6 +28,7 @@ htmlFile.close()
 soup = BeautifulSoup(open("test.html"))
 soup.prettify()
 
+#comment
 print(soup.find("div", {"class": "wiki-content"}).prettify())
 
 
