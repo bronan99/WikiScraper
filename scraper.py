@@ -38,16 +38,23 @@ count = 1
 d = {}
 key = ""
 
+
 for data in tabledata:
 	if count%2 == 0:
-		soup1 = data.findAll("span")
+		soup1 = data.findAll("p")
+		soup2 = data.findAll('span')
 		soupList = ""
 		for line in soup1:
-			soupList += line.string.encode('ascii', 'ignore')
+			if (type(line.span)) == type(None) :
+				soupList += line.string.encode('ascii','ignore')
+		for line in soup2 :
+			soupList += line.string.encode('ascii','ignore')
+			# else:
+			#  	soupList += line.span.string.encode('ascii','ignore')
 		d[key] = soupList
 		key = ""
 	else:
-		key = data.span.string
+		key = data.span.string.encode('ascii','ignore')
 	count +=1
 
 print(d)

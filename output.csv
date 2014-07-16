@@ -1,5 +1,5 @@
 Mercury,A Cengage production system used to assign Cengages vocabulary and taxonomical terms to content and assets.
-Agile,"A rapid, iterative, incremental software development methodology used to develop functionality, as opposed to the Waterfall approach. The particular variation of Agile used by the Next Generation team is scrum.Roles in Agile include: Product Owner Team (Dev, UI, UX, QA, SA, Tech Writer, etc.) Scrum Master"
+Agile,"A rapid, iterative, incremental software development methodology used to develop functionality, as opposed to the Waterfall approach. The particular variation of Agile used by the Next Generation team is scrum.Roles in Agile include:Product OwnerTeam (Dev, UI, UX, QA, SA, Tech Writer, etc.)Scrum Master"
 Flash,"Adobe Systemss interactive multimedia platform, not supported by Apple mobile devices such as the iPad and iPhone."
 Provisioning,The process by which CL makes apps available to MindTap - either to a Master or Snapshot.
 PAC,"Abbreviation for Printed Access Card. Typically, the saleable access code printed on cards that can be sold separately or bundled with a book in bookstores or other retail outlets."
@@ -34,7 +34,7 @@ Section,A specific instance of a course. Some courses only have one section; oth
 Core text ISBN,The ISBN of the physical textbook.
 B-head,"A subheading under an A-head of a chapter. Example: (from Mankiw Principals of Economics, Chapter 1)B-heads under the A-head How People Interact include the following:Principle 5: Trade Can Make Everyone Better OffPrinciple 6: Markets are Usually a Good Way to Organize Economic ActivityPrinciple 7: Governments can Sometimes Improve Market Outcomes"
 Master,A Master MT is the canonical version of a MindTap course from which individual instances (snapshots) are created.A Master MindTap can be in one of these states:UnpublishedPublishedWorking Copy
-Gradable,An assignment setting for an AA activity that means its score contributes to student grades for the class An individual AA activity can be Gradable or Not gradable.
+Gradable,An assignment setting for an AA activity that means its score contributes to student grades for the classAn individual AA activity can be Gradable or Not gradable.
 User identifier,"A level of identification used to indicate an individual instructor, student or administrator."
 eReader,"A device or software for reading digital content such as eBooks, newspapers, blogs and documents."
 Waterfall,"Traditional software development methodology that undertakes development as long cycles of design, development, and deployment as opposed to a rapid methodology like Agile that uses short, frequent cycles like sprints."
@@ -72,6 +72,7 @@ Snapshot,"An instance in a MindTap created for an organization for use by studen
 MindTap,"A Personal Learning Environment for enhanced title delivery, integrating a set of flexible tools to allow customers to adapt the technology to fit their teaching and learning needs."
 API (Application Programming Interface),An interface of a software program that enables it to interact with other software.
 eBook,A digital version of a conventional print book.
+Validate Page,"A wiki representation of the validate phase within the Digital Product Delivery Model that does confirming testing done during the build phase.After feature freeze and before final code freeze, the product owner is given access to the digital product on a staging environment in order to review and validate that what is built meets requirements."
 CengageNOW ,"A teaching and learning resource offering assignments, grading, quizzing, student outcome tracking, flexible assignment and Gradebook options plus a diagnostic Personalized Study Plan with a chapter-specific pre-test, study plan and post-test. MindTap is incorporating CNow problem sets as assignments."
 Course mode,Titles that include a Learning Path with Learning Units and assignments.
 OEB,An open source eBook XML format.
@@ -94,7 +95,7 @@ HTML5,"The latest implementation of the Hypertext Markup Language, the standard 
 App Dock,An area of the MindTap screen on the far right in which icons representing apps reside.
 Engagement Tracker,Tracking tools that enable instructors to monitor student engagement. Uses graphical analytics to show progress. Provides the ability to do the following:View class or individual learner progress Identify learners at risk Determine which concepts learners find difficult and monitor time on task
 Content of record,"The canonical instance of an asset and its associated metadata. For MindTap, Geyser stores the content of record."
-User story,"An Agile term referring to a brief description of functionality as required by a specific role, for example, Instructor, Learner, Superadmin or CourseCare. The format that the MindTap team uses is as follows: As a (role) I want to (task) So that I can (objective)NOTE: A fully developed user story must provide sufficient information for the developer to program the functionality and for it to be testable."
+User story,"An Agile term referring to a brief description of functionality as required by a specific role, for example, Instructor, Learner, Superadmin or CourseCare. The format that the MindTap team uses is as follows:As a (role)I want to (task)So that I can (objective)NOTE: A fully developed user story must provide sufficient information for the developer to program the functionality and for it to be testable."
 CenDoc,CenDoc is the canonical XML of record for all book content at Cengage. It is a semantic markup that is presentation-agnostic; CenDoc is transformed into ReaderDoc for display in a MindTap.
 My Notes,A category within MindTap that collects the Highlights app and the Notebook app.
 Learning Management System (LMS),"Software that administers, documents, tracks learner progress and reports results of educational or training programs, classroom and online events. Examples include Blackboard, Moodle and Desire2Learn. Can be used to manage all of an institutions courses."
