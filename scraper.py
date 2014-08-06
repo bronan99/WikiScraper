@@ -31,41 +31,47 @@ htmlFile.close()
 soup = BeautifulSoup(open("glossary.html"))
 soup.prettify()
 
-tabledata = soup.findAll("td", {"class": "confluenceTd"})
+test_array = []
 
-# create a dictionary from tabledata of glossary terms/definitions
-count = 1
-d = {}
-key = ""
-
-
-for data in tabledata:
-	if count%2 == 0:
-		soup1 = data.findAll("p")
-		soup2 = data.findAll('span')
-		soupList = ""
-		for line in soup1:
-			if (type(line.span)) == type(None) :
+headers = soup.findAll("h1")
+for count in range(1, len(headers)) :
+	category = headers[count].span.string.encode('ascii','ignore')
+	print(category)
+	tabledata = soup.findAll("td", {"class": "confluenceTd"})
+	count = 1
+	key = ""
+	for data in tabledata:
+		if count%2 == 0:
+			soup1 = data.findAll("p")
+			soup2 = data.findAll('span')
+			soupList = ""
+			for line in soup1:
+				if (type(line.span)) == type(None) :
+					soupList += line.string.encode('ascii','ignore')
+			for line in soup2 :
 				soupList += line.string.encode('ascii','ignore')
-		for line in soup2 :
-			soupList += line.string.encode('ascii','ignore')
-			# else:
-			#  	soupList += line.span.string.encode('ascii','ignore')
-		d[key] = soupList
-		key = ""
-	else:
-		key = data.span.string.encode('ascii','ignore')
-	count +=1
+			test_array.append({'Category': category,'Term': key, 'Definition': soupList});
+			key = ""
+		else:
+			if(type(data.span)) == type(None) :
+				key = data.string.encode('ascii','ignore')
+			else:
+				key = data.span.string.encode('ascii','ignore')
+		count +=1
 
-print(d)
+print(test_array)
+fieldnames = ['Category', 'Term', 'Definition']
+test_file = open('output.csv','wb')
+csvwriter = csv.DictWriter(test_file, delimiter=',', fieldnames=fieldnames)
+csvwriter.writerow(dict((fn,fn) for fn in fieldnames))
+for row in test_array:
+     csvwriter.writerow(row)
+test_file.close()
 
-# write dictionary to csv 
-with open('output.csv','wb') as f:
-    w = csv.writer(f)
-    w.writerows(d.items())	
+
+
 
 #melanie was here
 #phil was here
 #derek was here
 #htmlFile.write(soup.find("td", {"class": "confluenceTd"}).prettify().encode('utf-8'))
-
